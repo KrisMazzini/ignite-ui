@@ -24,6 +24,9 @@ jobs:
 
       - run: npm ci
 
+      - name: Clear Vercel Cache
+        run: npx vercel clear
+
       - name: Publish to NPM
         id: changesets
         uses: changesets/action@v1
