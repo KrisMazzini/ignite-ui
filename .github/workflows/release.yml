@@ -24,8 +24,8 @@ jobs:
 
       - run: npm ci
 
-      - name: Clear Vercel Cache
-        run: npx vercel clear
+      - name: Create Cache Invalidation File
+        run: touch .vercelignore
 
       - name: Publish to NPM
         id: changesets
