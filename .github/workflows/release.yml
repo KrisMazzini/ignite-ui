@@ -19,13 +19,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
 
       - run: npm ci
-
-      - name: Create Cache Invalidation File
-        run: touch .vercelignore
 
       - name: Publish to NPM
         id: changesets
@@ -36,5 +31,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          TURBO_TEAM: krismazzini
