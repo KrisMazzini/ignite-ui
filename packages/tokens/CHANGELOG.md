@@ -1,5 +1,11 @@
 # @mazzini-ignite-ui/tokens
 
+## 1.0.3
+
+### Patch Changes
+
+- Change color tokens
+
 ## 1.0.2
 
 ### Patch Changes
